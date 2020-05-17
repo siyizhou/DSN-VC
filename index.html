@@ -14,12 +14,11 @@
    
     <div><b>Authors:</b> Siyi Zhou, Minchuan Chen, Yi Xu, Jun Ma, Shaojun Wang, Jing Xiao</div>
     <div><b>Abstract:</b> Most previous works on voice conversion (VC) require either parallel corpora or sufficient training data from target speakers. 
-      In this paper, we propose DSN-VC, 
-      a one-shot voice conversion model which can perform VC from an arbitrary source speaker to an arbitrary target speaker, 
-      and both the source and target speakers do not need to be seen during the training stage. 
-      The speaker identities and content representations are disentangled by domain separation networks (DSN). 
-      In our proposed model, the content encoder is trained to capture the speaker-independent content representations by a gradient reversal layer and the speaker encoder is used to capture the speaker-specific representations. 
-      A phoneme recognition module is introduced to ensure that the valid content information is preserved. 
+      In this paper, we propose a DSN based VC (DSN-VC) system, which can perform VC from an arbitrary source speaker to an arbitrary target speaker and both the source and target speakers do not need to be seen in the training set. 
+      To achieve one-shot VC, the speaker and content representations are disentangled by domain separation networks (DSN). 
+      In our proposed model, a speaker encoder is utilized to capture speaker-specific representations from the input acoustic features, and a content encoder is trained to capture speaker-independent content representations by leveraging a gradient reversal layer (GRL) and a speaker classifier. 
+      Meanwhile, the content and speaker representations are further pushed apart with soft subspace orthogonality constraints. 
+      A phoneme recognition module is introduced to map the content representations to phonetic posteriorgrams (PPGs). 
       Our experiment demonstrates that the proposed DSN-VC model can achieve better results compared with the baseline.</div>
     
     
